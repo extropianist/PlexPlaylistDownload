@@ -1,5 +1,35 @@
 # PlexPlaylistDownload
 
+----------------------------------------------------------------------------------------------------------------------------
+
+Here is a summary of the changes made to the script from the original version to the current version:
+
+Configuration File Support:
+
+Added the ability to load settings from a configuration file (config.yaml).
+Added configuration options for host, token, playlist, save_to, and max_threads.
+Progress Bar and Logging:
+
+Added tqdm for progress tracking during downloads, although this feature was later removed due to issues.
+Introduced a logging mechanism using the logging module to log activities and errors into plex_downloader.log.
+Multithreaded Downloads:
+
+Integrated ThreadPoolExecutor to allow parallel downloading of playlist items using multiple threads, controlled by the --max-threads argument.
+Enhanced User Prompts:
+
+Added a feature that lists the files to be downloaded and prompts the user to confirm before proceeding with the downloads.
+After the download, the script now asks the user if they want to review the log file. If the user agrees, it opens the log file using cat.
+Removed skip-existing Feature:
+
+Initially, a --skip-existing feature was added, allowing users to skip files that already exist in the target directory. This was later removed upon user request.
+Code Improvements:
+
+Fixed various indentation issues and syntax errors to ensure smooth operation.
+Improved error handling when connecting to the Plex server, switching user accounts, and downloading files.
+The final script provides better flexibility for users through configuration files, multithreaded downloads, enhanced logging, and improved user interactions while ensuring a smooth and error-free experience.
+
+----------------------------------------------------------------------------------------------------------------------------
+
 A small python script to download playlists created on a [Plex](https://www.plex.tv/) media server to physical files
 on your filesystem.
 
