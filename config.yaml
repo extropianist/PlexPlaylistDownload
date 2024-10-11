@@ -1,0 +1,7 @@
+plex:
+  host: "http://192.168.0.100:32400"
+  token: "XXXXXXXXXXXXXXXX"
+  playlist: "PLaylist 1"  # The name of the Playlist in Plex for downloading
+  save_to: "/Video Files" # The directory where the downloaded files will be saved
+  max_threads: 4                    # Maximum number of threads for downloading files
+ 
